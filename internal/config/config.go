@@ -17,6 +17,6 @@ func Load() *Config {
 	return &Config{
 		RabbitMQURL: os.Getenv("RABBITMQ_URL"),
 		QueueName:   os.Getenv("RABBITMQ_QUEUE_NAME_CONSUMING"),
-		Port:        os.Getenv("PORT"),
+		Port:        os.Getenv("SERVER_PORT"),
 	}
 }

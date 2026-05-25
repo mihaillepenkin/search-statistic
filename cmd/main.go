@@ -63,7 +63,8 @@ func main() {
 	}()
 
 	if err := cons.Start(ctx); err != nil && err != context.Canceled {
-		log.Fatal("failed to start rabbitmq consumer")
+		log.Printf("RabbitMQ consumer error: %v", err)
+    	log.Fatal("failed to start rabbitmq consumer")
 	}
 
 	log.Print("Service stopped gracefully")
